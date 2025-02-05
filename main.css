@@ -1,0 +1,40 @@
+.countdown {
+    display: flex;
+    flex-wrap: nowrap; /* Giữ nguyên hàng ngang trên màn hình lớn */
+    justify-content: center;
+    gap: 10px;
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.countdown div {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+    .countdown {
+        flex-wrap: wrap; /* Tự động xuống dòng trên màn hình nhỏ */
+        font-size: 32px; /* Giảm kích thước font cho phù hợp */
+    }
+
+    .countdown div {
+        min-width: 80px; /* Giữ kích thước tương ứng */
+        padding: 15px; /* Giữ khoảng cách */
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .quote, .date, .footer {
+        font-size: 14px;
+    }
+}
